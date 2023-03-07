@@ -46,3 +46,27 @@ function changeFruit(fruit) {
   return fruit
 }
 ///// The value of fruit after calling the function will be ['apple', 'mango', 'orange']
+////4
+function max(arr) {
+  let maxVal = arr[0] // initialize maxVal to the first element
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxVal) {
+      maxVal = arr[i]
+    }
+  }
+  return maxVal
+}
+
+const arr = [4, 5, 10, -2]
+const maxVal = max(arr)
+console.log(maxVal) // output: 10
+
+/////5
+function valTimesIndex(arr) {
+  return arr.map((val, index) => val * index)
+}
+
+const arr1 = [1, 2, 3]
+const arr2 = [5, 10, 15]
+console.log(valTimesIndex(arr1)) // output: [0, 2, 6]
+console.log(valTimesIndex(arr2)) // output: [0, 10, 30]
